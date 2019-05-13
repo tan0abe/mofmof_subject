@@ -1,0 +1,110 @@
+<h1>物件登録</h1>
+<div class="new-main">
+  <%= form_for(@home) do |f| %>
+    <div class="field">
+      <div>
+        <%= f.label :name, "物件名" %>
+      </div>
+      <div>
+        <%= f.text_field :name %>
+      </div>
+    </div>
+    <div class="field">
+      <div>
+        <%= f.label :price, "賃料" %>
+      </div>
+      <div>
+        <%= f.text_field :price %>円
+      </div>
+    </div>
+    <div class="field">
+      <div>
+        <%= f.label :address, "住所"  %>
+      </div>
+      <div>
+        <%= f.text_field :address %>
+      </div>
+    </div>
+    <div class="field">
+      <div>
+        <%= f.label :year, "築年数"  %>
+      </div>
+      <div>
+        <%= f.text_field :year %>年
+      </div>
+    </div>
+    <div class="field">
+      <div>
+        <%= f.label :comment, "備考"  %>
+      </div>
+      <div>
+        <%= f.text_area :comment %>
+      </div>
+    </div>
+<hr>
+<div class="info-station">
+  <%= f.fields_for :near_stations do |s_f| %>
+  <h2>最寄り駅１</h2>
+  <div class="field">
+    <div>
+      <%= s_f.label :line, "路線名"  %>
+    </div>
+    <div>
+      <%= s_f.text_field :line %>
+    </div>
+  </div>
+  <div class="field">
+    <div>
+      <%= s_f.label :station, "駅名"  %>
+    </div>
+    <div>
+      <%= s_f.text_field :station %>
+    </div>
+  </div>
+  <div class="field">
+    <div>
+      <%= s_f.label :minute_walk, "徒歩分数"  %>
+    </div>
+    <div>
+      <%= s_f.text_field :minute_walk %>分
+    </div>
+  </div>
+  <% end %>
+</div>
+<div class="info-station">
+  <%= f.fields_for :near_stations do |s_f| %>
+  <h2>最寄り駅２</h2>
+  <div class="field">
+    <div>
+      <%= s_f.label :line, "路線名"  %>
+    </div>
+    <div>
+      <%= s_f.text_field :line %>
+    </div>
+  </div>
+  <div class="field">
+    <div>
+      <%= s_f.label :station, "駅名"  %>
+    </div>
+    <div>
+      <%= s_f.text_field :station %>
+    </div>
+  </div>
+  <div class="field">
+    <div>
+      <%= s_f.label :minute_walk, "徒歩分数"  %>
+    </div>
+    <div>
+      <%= s_f.text_field :minute_walk %>分
+    </div>
+  </div>
+  <% end %>
+</div>
+  <div class="actions">
+    <%= f.submit "登録する" %>
+  </div>
+  <% end %>
+  <div class="back-action">
+   <%= link_to "戻る", root_path %>
+  </div>
+</div>
