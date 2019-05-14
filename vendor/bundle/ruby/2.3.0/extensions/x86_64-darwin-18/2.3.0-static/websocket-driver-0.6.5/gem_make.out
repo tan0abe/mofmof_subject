@@ -1,0 +1,15 @@
+current directory: /Users/tanabe/workspace/mofmof_subject/vendor/bundle/ruby/2.3.0/gems/websocket-driver-0.6.5/ext/websocket-driver
+/Users/tanabe/.rbenv/versions/2.3.1/bin/ruby -r ./siteconf20190513-49497-nois2a.rb extconf.rb
+creating Makefile
+
+current directory: /Users/tanabe/workspace/mofmof_subject/vendor/bundle/ruby/2.3.0/gems/websocket-driver-0.6.5/ext/websocket-driver
+make "DESTDIR=" clean
+
+current directory: /Users/tanabe/workspace/mofmof_subject/vendor/bundle/ruby/2.3.0/gems/websocket-driver-0.6.5/ext/websocket-driver
+make "DESTDIR="
+compiling websocket_mask.c
+linking shared-object websocket_mask.bundle
+
+current directory: /Users/tanabe/workspace/mofmof_subject/vendor/bundle/ruby/2.3.0/gems/websocket-driver-0.6.5/ext/websocket-driver
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 websocket_mask.bundle ./.gem.20190513-49497-9c48bk

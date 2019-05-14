@@ -1,0 +1,20 @@
+<h1>物件詳細</h1>
+<p><b>物件名:</b> <%= @home.name %></p>
+<p><b>賃料:</b> <%= @home.price %>円</p>
+<p><b>住所:</b> <%= @home.address %></p>
+<p><b>築年数:</b> <%= @home.year %>年</p>
+<p><b>備考:</b> <%= @home.comment %></p>
+
+<hr>
+
+
+
+
+<% @near_station.each.with_index(1) do |station,index| %>
+    <h2><%= "最寄り駅#{index}" %></h2>
+    <p><b>路線:</b> <%= station.line %></p>
+    <p><b>駅名:</b> <%= station.station %></p>
+    <p><b>徒歩分数:</b> <%= station.minute_walk %>分</p>
+<% end %>
+<%= link_to "編集", edit_home_path(@home) %> |
+<%= link_to '戻る', homes_path %>
