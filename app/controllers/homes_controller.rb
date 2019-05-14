@@ -1,5 +1,5 @@
 class HomesController < ApplicationController
-  before_action :set_params, only: %i[show eidt update destroy]
+  before_action :set_home, only: %i[show edit update destroy]
 
   def new
     @home = Home.new
@@ -19,11 +19,11 @@ class HomesController < ApplicationController
   end
 
   def show
-    @near_stations = @home.near_stations
+    @near_station = @home.near_stations
   end
 
   def edit
-    @near_stations = @home.near_stations
+    @near_station = @home.near_stations
   end
 
   def update
@@ -46,7 +46,11 @@ class HomesController < ApplicationController
   end
 
   def home_params
-    params.require(:home).permit(:name, :price, :address, :year, :comment, near_stations_attributes: [:line, :station, :minute_walk])
+    params.require(:home).permit(:name,
+                                 :price,
+                                 :address,
+                                 :year, :comment,
+      near_stations_attributes: [:id, :line, :station, :minute_walk])
   end
 
   def update_params
