@@ -50,7 +50,7 @@ class HomesController < ApplicationController
                                  :price,
                                  :address,
                                  :year, :comment,
-      near_stations_attributes: [:id, :line, :station, :minute_walk])
+      near_stations_attributes: [:line, :station, :minute_walk])
   end
 
   def update_params
