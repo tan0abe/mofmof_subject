@@ -20,7 +20,7 @@
       <td><%= h.comment %></td>
       <td><%= link_to "詳細", home_path(h.id) %></td>
       <td><%= link_to "編集", edit_home_path(h.id) %></td>
-      <td><%= link_to "削除", home_path(h.id),method: :delete %></td>
+      <td><%= link_to "削除", home_path(h.id), method: :delete, data: { confirm: '削除しますか？' } %></td>
     </tr>
     <% end %>
   </table>
